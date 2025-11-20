@@ -1,8 +1,10 @@
-# Swatchtime
+# Swatch Internet Time
 
 Welcome — this org is a small collection of apps and tools around Swatch Internet Time ('.beats').
 
 For now this is a placeholder README. I’m actively developing several projects and will expand documentation here as they mature.
+
+<img src="https://kendawson.online/img/swatch-time.jpg" width="500">
 
 ## Current projects
 
