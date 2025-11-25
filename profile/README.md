@@ -8,8 +8,11 @@ This site is a fan-made revival and is not affiliated with or endorsed by Swatch
 
 #### Links:
 
-- https://www.swatch.com/en-us/internet-time.html
-- https://en.wikipedia.org/wiki/Swatch_Internet_Time
+- Main app: https://swatchtime.online  
+- API endpoint: https://api.swatchtime.online/api/v1/current  
+- API Demo: https://demo.swatchtime.online
+- About Swatch Internet Time: https://www.swatch.com/en-us/internet-time.html
+- Wikipedia page: https://en.wikipedia.org/wiki/Swatch_Internet_Time
 
 <br>
 
@@ -63,14 +66,11 @@ More apps and tools we plan to build and add to this organization:
 
 ## Contributing
 
-This is a work in progress. Contributions, issues, and ideas are welcome. For now, open issues in the appropriate repository (or in this org if you need a general discussion), and we'll triage them as projects become ready.
+This is a work in progress. Contributions, issues, and ideas are welcome. For now, open issues or create pull requests in the appropriate repository, and we'll triage them as projects become ready.
 
-## Contact / Links
+## Contact Info
 
 - GitHub: https://github.com/kendawson-online
-- Main app: https://swatchtime.online  
-- API endpoint: https://api.swatchtime.online/api/v1/current  
-- API Demo: https://demo.swatchtime.online
 - Email: <a href="mailto:admin@swatchtime.online" title="Send Email">admin@swatchtime.online</a>
 
 ## Disclaimer
