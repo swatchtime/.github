@@ -66,13 +66,18 @@ More apps and tools we plan to build and add to this organization:
 
 ## Contributing
 
-This is a work in progress. Contributions, issues, and ideas are welcome. For now, open issues or create pull requests in the appropriate repository, and we'll triage them as projects become ready.
+This is a work in progress. Contributions, issues, and ideas are welcome. Feel free to start a thread in our [Discussions forum](https://github.com/orgs/swatchtime/discussions) if you have any questions or comments. If you're a developer familiar with GitHub, open issues or create pull requests in the appropriate repository, and we'll triage them as needed.
+
+If you are here to report a bug related to the Swatch Time Cinnamon Desklet (for Linux Mint) please create a new issue here: 
+ - https://github.com/swatchtime/cinnamon-desklet/issues
 
 ## Contact Info
 
 - GitHub: https://github.com/kendawson-online
 - Email: <a href="mailto:admin@swatchtime.online" title="Send Email">admin@swatchtime.online</a>
 
-## Disclaimer
+<br><br>
+
+## Disclaimer:
 
 This site is an independent revival of Swatch Internet Time and is not affiliated with Swatch Group. You can visit the official Swatch web site here: <a href="https://www.swatch.com/en-us/" target="_blank" rel="noopener noreferrer">https://www.swatch.com/</a>
