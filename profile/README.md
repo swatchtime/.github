@@ -54,7 +54,7 @@ There is a simple API which returns the current Swatch Internet Time:
 
 ## Planned projects
 
-More apps and tools we plan to build and add to this organization:
+Some apps and tools we plan to build and add to this organization:
 
 - Android and iPhone apps
 - Desktop applications
