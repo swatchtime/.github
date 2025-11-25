@@ -1,45 +1,78 @@
-# Swatch Internet Time
+# Swatch Internet Time Revival
 
-Welcome — this org is a small collection of apps and tools around Swatch Internet Time ('.beats').
+Welcome! 👋
 
-For now this is a placeholder README. I’m actively developing several projects and will expand documentation here as they mature.
+Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1).
 
-<img src="https://kendawson.online/img/swatch-time.jpg" width="500">
+This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: websites, desktops, mobile devices, smart watches, and more!
 
-## Current projects
+#### Links:
 
-- Plain JavaScript demo app (initial, small & simple)
-- Preact app (in development) — repo: @kendawson-online/swatch-preact
-  - Demo site: https://swatchtime.online
+- https://www.swatch.com/en-us/internet-time.html
+- https://en.wikipedia.org/wiki/Swatch_Internet_Time
 
-## API
+<br>
 
-There is a simple API that returns the current Swatch Internet Time. Documentation is TODO.
+# Screenshots
 
-- Endpoint (example): https://api.swatchtime.online/api/v1/current
+(Click to see full-sized image)
 
-I will add full API docs, usage examples, and client libraries here soon.
+<table align="center">
+  <tr>
+    <td>
+      <a href="../img/screenshot5.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time web site"><img src="../img/screenshot5.png" width="240" alt="Web site"></a>
+    </td>
+    <td>
+      <a href="../img/screenshot2.jpg" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time Javascript app"><img src="../img/screenshot2.jpg" width="240" alt="Javascript app"></a>
+    </td>
+    <td>
+      <a href="../img/screenshot1.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time desklet for Linux"><img src="../img/screenshot1.png" width="240" alt="Desklet for Linux"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="../img/screenshot3.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time API"><img src="../img/screenshot3.png" width="240" alt="Swatch Internet Time API"></a>
+    </td>
+    <td>
+      <a href="../img/screenshot4.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time API Demo site"><img src="../img/screenshot4.png" width="240" alt="API Demo"></a>
+    </td>
+    <td>
+      <!-- insert future image here -->
+    </td>
+  </tr>
+</table>
+
+## Developer API
+
+There is a simple API which returns the current Swatch Internet Time:
+
+- Endpoint: https://api.swatchtime.online/api/v1/current
+- API Demo: https://demo.swatchtime.online
 
 ## Planned projects
 
-More apps and tools I plan to build and add to this organization:
+More apps and tools we plan to build and add to this organization:
 
-- Android app
-- Desktop app (cross-platform)
+- Android and iPhone apps
+- Desktop applications
+- Desktop gadgets/widgets/desklets for multiple platforms
 - Smart watch (WearOS) app
-- Website widgets / embeddable clocks
-- Generic library to help others build Swatch Internet Time clocks
+- Embeddable clocks for web sites
+- Smart TV apps
+- Generic libraries to help others build Swatch Internet Time clocks
 
 ## Contributing
 
-This is a work in progress. Contributions, issues, and ideas are welcome. For now, open issues in the appropriate repository (or in this org if you need a general discussion), and I’ll triage them as projects become ready.
+This is a work in progress. Contributions, issues, and ideas are welcome. For now, open issues in the appropriate repository (or in this org if you need a general discussion), and we'll triage them as projects become ready.
 
 ## Contact / Links
 
-- Preact demo: https://swatchtime.online  
+- GitHub: https://github.com/kendawson-online
+- Main app: https://swatchtime.online  
 - API endpoint: https://api.swatchtime.online/api/v1/current  
-- Preact repo: @kendawson-online/swatch-preact
+- API Demo: https://demo.swatchtime.online
+- Email: <a href="mailto:admin@swatchtime.online" title="Send Email">admin@swatchtime.online</a>
 
----
+## Disclaimer
 
-This README is a placeholder; I’ll refine it and add links, documentation, and project pages as the apps are developed.
+This site is an independent revival of Swatch Internet Time and is not affiliated with Swatch Group. You can visit the official Swatch web site here: <a href="https://www.swatch.com/en-us/" target="_blank" rel="noopener noreferrer">https://www.swatch.com/</a>
