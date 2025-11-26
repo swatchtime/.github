@@ -69,7 +69,7 @@ display = `@${String(beat).padStart(3,'0')}`
 
 Examples (UTC timestamps -> beats):
 
-- `2025-01-01T00:00:00Z` -> Biel 01:00:00 -> `@041`? (see note below)
+- `2025-01-01T00:00:00Z` -> Biel 01:00:00 -> `@041` (see note below)
 - `2025-01-01T23:00:00Z` -> Biel 00:00:00 (next day) -> `@000`
 
 Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently; use the formula above for canonical results.
@@ -86,6 +86,14 @@ There is a simple API which returns the current Swatch Internet Time:
 
 - Endpoint: https://api.swatchtime.online/api/v1/current
 - API Demo: https://demo.swatchtime.online
+
+## Sample Code
+
+We maintain a companion repository with runnable, single-file examples in many languages that implement the canonical Swatch beat calculation (UTC+1, no DST). The repo is intended for developers who want copy-pasteable snippets and quick verification vectors.
+
+- Repository: https://github.com/swatchtime/sample-code
+
+The `sample-code` repo contains one-file examples (JavaScript, Python, Go, Rust, C, C++, C#, Java, PHP, Bash, PowerShell, Haskell, Ruby, Swift, Kotlin, Lua, Elixir, and more) and a README with test vectors and run instructions.
 
 ## Planned projects
 
