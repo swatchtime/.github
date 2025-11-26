@@ -2,7 +2,7 @@
 
 Welcome! 👋
 
-Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1).
+Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1) with the number of beats at 000. Twenty three hours and 59 minutes later, the day ends at 999 beats. Beats are written with an @ sign in front of them. So, @567 is 567 beats. Beats can also be subdivided into a 100 centibeats and the time can be displayed as @567.78 for greater precision. After @567.99, the time changes to @568.00.
 
 This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: websites, desktops, mobile devices, smart watches, and more!
 
@@ -89,7 +89,7 @@ There is a simple API which returns the current Swatch Internet Time:
 
 ## Planned projects
 
-More apps and tools we plan to build and add to this organization:
+Some apps and tools we plan to build and add to this organization:
 
 - Android and iPhone apps
 - Desktop applications
