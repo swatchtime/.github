@@ -45,6 +45,41 @@ This site is a fan-made revival and is not affiliated with or endorsed by Swatch
   </tr>
 </table>
 
+## Definition of Beats
+
+Swatch Internet Time is expressed in "beats" (written as `@nnn`), where a day is divided into 1,000 equal parts.
+
+Canonical definition used by this organization:
+
+- Reference zone: Biel Mean Time (BMT) defined as a fixed offset of UTC+1 (no daylight-saving adjustments).
+- One beat = 86.4 seconds (86.4 = 86400 / 1000).
+- Beats run from `@000` at Biel midnight (00:00:00 UTC+1) through `@999` just before the next Biel midnight.
+
+Computation (pseudocode):
+
+```
+// JavaScript-style pseudocode
+now = new Date()
+utcSeconds = now.getUTCHours() * 3600 + now.getUTCMinutes() * 60 + now.getUTCSeconds()
+// convert to Biel time (UTC+1) and wrap into 0..86399
+bielSeconds = (utcSeconds + 3600 + 24*3600) % (24*3600)
+beat = Math.floor(bielSeconds / 86.4) % 1000
+display = `@${String(beat).padStart(3,'0')}`
+```
+
+Examples (UTC timestamps -> beats):
+
+- `2025-01-01T00:00:00Z` -> Biel 01:00:00 -> `@041`? (see note below)
+- `2025-01-01T23:00:00Z` -> Biel 00:00:00 (next day) -> `@000`
+
+Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently; use the formula above for canonical results.
+
+Rationale / decision on DST:
+
+Historically there is ambiguity about whether to follow local Biel civil time (which observes DST) or to treat Biel as a fixed UTC+1 reference. To maximise interoperability, predictability, and simplicity for implementers, this project uses Biel as a fixed UTC+1 reference and does not apply daylight-saving adjustments. That means beats are stable across the year and do not jump when DST would otherwise change local civil time.
+
+If you integrate with this organization's API or libraries, compute beats using the formula above so implementations are consistent.
+
 ## Developer API
 
 There is a simple API which returns the current Swatch Internet Time:
