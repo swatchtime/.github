@@ -89,7 +89,6 @@ Plain-text version:
 ```
 beats = floor(seconds_since_Biel_midnight (UTC+1) / 86.4) % 1000
 ```
-<br>
 
 #### Rationale / decision on DST:
 
