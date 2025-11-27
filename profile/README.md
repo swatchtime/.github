@@ -76,23 +76,14 @@ Note: small off-by-one differences may occur in example arithmetic if seconds ar
 
 #### Mathematical definition:
 
-If you prefer a compact mathematical form, the canonical formula can be written using a short variable to avoid ambiguous subscripts:
+If you prefer a compact mathematical form, the canonical formula can be written as:<br><br>
 
-$$
-\displaystyle\mathrm{beats} \,=\, \left\lfloor\dfrac{S}{86.4}\right\rfloor \bmod 1000
-$$
+![Beat calculation formula](../img/formula.png)
 
-where
-
-$$
-\displaystyle S = \text{seconds since Biel midnight (UTC+1)}
-$$
-
-Plain-text fallback:
+Plain-text version:
 
 ```
-beats = floor(S / 86.4) % 1000
-S = seconds_since_Biel_midnight (UTC+1)
+beats = floor(seconds_since_Biel_midnight (UTC+1) / 86.4) % 1000
 ```
 
 #### Rationale / decision on DST:
