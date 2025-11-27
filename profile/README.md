@@ -15,6 +15,7 @@ This site is a fan-made revival and is not affiliated with or endorsed by Swatch
 - Main app: https://swatchtime.online  
 - API endpoint: https://api.swatchtime.online/api/v1/current  
 - API Demo: https://demo.swatchtime.online
+- Basic Javascript app: https://kendawson.online/free/swatch/
 - About Swatch Internet Time: https://www.swatch.com/en-us/internet-time.html
 - Wikipedia page: https://en.wikipedia.org/wiki/Swatch_Internet_Time
 
