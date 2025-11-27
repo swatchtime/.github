@@ -78,8 +78,6 @@ Examples (UTC timestamps -> beats):
 - `2025-01-01T00:00:00Z` -> Biel 01:00:00 -> `@041` (see note below)
 - `2025-01-01T23:00:00Z` -> Biel 00:00:00 (next day) -> `@000`
 
-<br>
-
 #### Mathematical definition:
 
 If you prefer a compact mathematical form, the canonical formula can be written as:<br><br>
