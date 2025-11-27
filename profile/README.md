@@ -80,7 +80,7 @@ Examples (UTC timestamps -> beats):
 
 #### Mathematical definition:
 
-If you prefer a compact mathematical form, the canonical formula can be written as:<br><br>
+If you prefer a compact mathematical form, the canonical formula can be written as:<br>
 
 ![Beat calculation formula](../img/formula.png)
 
