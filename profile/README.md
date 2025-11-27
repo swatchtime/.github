@@ -78,8 +78,6 @@ Examples (UTC timestamps -> beats):
 - `2025-01-01T00:00:00Z` -> Biel 01:00:00 -> `@041` (see note below)
 - `2025-01-01T23:00:00Z` -> Biel 00:00:00 (next day) -> `@000`
 
-Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently; use the formula above for canonical results.
-
 <br>
 
 #### Mathematical definition:
@@ -99,7 +97,7 @@ beats = floor(seconds_since_Biel_midnight (UTC+1) / 86.4) % 1000
 
 Historically there is ambiguity about whether to follow local Biel civil time (which observes DST) or to treat Biel as a fixed UTC+1 reference. To maximise interoperability, predictability, and simplicity for implementers, this project uses Biel as a fixed UTC+1 reference and does not apply daylight-saving adjustments. That means beats are stable across the year and do not jump when DST would otherwise change local civil time.
 
-If you integrate with this organization's API or libraries, compute beats using the formula above so implementations are consistent.
+ Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently. If you integrate with this organization's API or libraries, compute beats using the formula above so implementations are consistent.
 
 <br>
 
