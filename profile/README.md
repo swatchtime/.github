@@ -79,13 +79,13 @@ Note: small off-by-one differences may occur in example arithmetic if seconds ar
 If you prefer a compact mathematical form, the canonical formula can be written using a short variable to avoid ambiguous subscripts:
 
 $$
-\mathrm{beats} \,=\, \left\lfloor\frac{S}{86.4}\right\rfloor \bmod 1000
+\displaystyle\mathrm{beats} \,=\, \left\lfloor\dfrac{S}{86.4}\right\rfloor \bmod 1000
 $$
 
 where
 
 $$
-S = \text{seconds since Biel midnight (UTC+1)}
+\displaystyle S = \text{seconds since Biel midnight (UTC+1)}
 $$
 
 Plain-text fallback:
