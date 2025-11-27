@@ -2,9 +2,13 @@
 
 Welcome! 👋
 
-Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1) with the number of beats at 000. Twenty three hours and 59 minutes later, the day ends at 999 beats. Beats are written with an @ sign in front of them. So, @567 is 567 beats. Beats can also be subdivided into a 100 centibeats and the time can be displayed as @567.78 for greater precision. After @567.99, the time changes to @568.00.
+Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1) with the number of beats at 000. Twenty three hours and 59 minutes later, the day ends at 999 beats. Beats are written with an @ sign in front of them. So, @567 is 567 beats. Beats can also be subdivided into a 100 centibeats and the time can be displayed as @567.78 for greater precision. After @567.99, the time changes to @568.00. 
 
-This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: websites, desktops, mobile devices, smart watches, and more!
+This is a photo of the meridian in Biel, Switzerland at the Swatch headquarters:
+
+<img src="../img/swatch-meridian.jpg" height="400">
+
+This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. This is not an official Swatch product. We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: websites, desktops, mobile devices, smart watches, and more!
 
 #### Links:
 
@@ -45,6 +49,8 @@ This site is a fan-made revival and is not affiliated with or endorsed by Swatch
   </tr>
 </table>
 
+<br>
+
 ## Definition of Beats
 
 Swatch Internet Time is expressed in "beats" (written as `@nnn`), where a day is divided into 1,000 equal parts.
@@ -74,6 +80,8 @@ Examples (UTC timestamps -> beats):
 
 Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently; use the formula above for canonical results.
 
+<br>
+
 #### Mathematical definition:
 
 If you prefer a compact mathematical form, the canonical formula can be written as:<br><br>
@@ -85,12 +93,15 @@ Plain-text version:
 ```
 beats = floor(seconds_since_Biel_midnight (UTC+1) / 86.4) % 1000
 ```
+<br>
 
 #### Rationale / decision on DST:
 
 Historically there is ambiguity about whether to follow local Biel civil time (which observes DST) or to treat Biel as a fixed UTC+1 reference. To maximise interoperability, predictability, and simplicity for implementers, this project uses Biel as a fixed UTC+1 reference and does not apply daylight-saving adjustments. That means beats are stable across the year and do not jump when DST would otherwise change local civil time.
 
 If you integrate with this organization's API or libraries, compute beats using the formula above so implementations are consistent.
+
+<br>
 
 ## Developer API
 
@@ -99,6 +110,8 @@ There is a simple API which returns the current Swatch Internet Time:
 - Endpoint: https://api.swatchtime.online/api/v1/current
 - API Demo: https://demo.swatchtime.online
 
+<br>
+
 ## Sample Code
 
 We maintain a companion repository with runnable, single-file examples in many languages that implement the canonical Swatch beat calculation (UTC+1, no DST). The repo is intended for developers who want copy-pasteable snippets and quick verification vectors.
@@ -106,6 +119,8 @@ We maintain a companion repository with runnable, single-file examples in many l
 - Repository: https://github.com/swatchtime/sample-code
 
 The `sample-code` repo contains one-file examples (JavaScript, Python, Go, Rust, C, C++, C#, Java, PHP, Bash, PowerShell, Haskell, Ruby, Swift, Kotlin, Lua, Elixir, and more) and a README with test vectors and run instructions.
+
+<br>
 
 ## Planned projects
 
@@ -119,12 +134,16 @@ Some apps and tools we plan to build and add to this organization:
 - Smart TV apps
 - Generic libraries to help others build Swatch Internet Time clocks
 
+<br>
+
 ## Contributing
 
 This is a work in progress. Contributions, issues, and ideas are welcome. Feel free to start a thread in our [Discussions forum](https://github.com/orgs/swatchtime/discussions) if you have any questions or comments. If you're a developer familiar with GitHub, open issues or create pull requests in the appropriate repository, and we'll triage them as needed.
 
 If you are here to report a bug related to the Swatch Time Cinnamon Desklet (for Linux Mint) please create a new issue here: 
  - https://github.com/swatchtime/cinnamon-desklet/issues
+
+<br>
 
 ## Contact Info
 
@@ -135,4 +154,4 @@ If you are here to report a bug related to the Swatch Time Cinnamon Desklet (for
 
 ## Disclaimer:
 
-This site is an independent revival of Swatch Internet Time and is not affiliated with Swatch Group. You can visit the official Swatch web site here: <a href="https://www.swatch.com/en-us/" target="_blank" rel="noopener noreferrer">https://www.swatch.com/</a>
+This site is an independent revival of Swatch Internet Time and is not affiliated with Swatch Group. Swatch® is a registered trademark of The Swatch Group LTD. You can visit the official Swatch web site here: <a href="https://www.swatch.com/en-us/" target="_blank" rel="noopener noreferrer">https://www.swatch.com/</a>
