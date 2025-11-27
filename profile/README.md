@@ -74,7 +74,21 @@ Examples (UTC timestamps -> beats):
 
 Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently; use the formula above for canonical results.
 
-Rationale / decision on DST:
+#### Mathematical definition:
+
+If you prefer a compact mathematical form, the canonical formula can be written as:
+
+$$
+\mathrm{beats} \,=\, \left\lfloor\frac{\mathrm{seconds\_since\_Biel\_midnight}}{86.4}\right\rfloor \bmod 1000
+$$
+
+Plain-text fallback:
+
+```
+beats = floor(seconds_since_Biel_midnight / 86.4) % 1000
+```
+
+#### Rationale / decision on DST:
 
 Historically there is ambiguity about whether to follow local Biel civil time (which observes DST) or to treat Biel as a fixed UTC+1 reference. To maximise interoperability, predictability, and simplicity for implementers, this project uses Biel as a fixed UTC+1 reference and does not apply daylight-saving adjustments. That means beats are stable across the year and do not jump when DST would otherwise change local civil time.
 
