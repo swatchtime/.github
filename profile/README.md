@@ -62,16 +62,43 @@ Canonical definition used by this organization:
 - One beat = 86.4 seconds (86.4 = 86400 / 1000).
 - Beats run from `@000` at Biel midnight (00:00:00 UTC+1) through `@999` just before the next Biel midnight.
 
+### Note on centibeat rounding
+
+Implementations that display centibeats (two decimals) should take care to round then wrap, rather than wrapping then rounding. If you round a raw beat value like `999.995` directly it will display `1000.00` briefly; correct behavior is to round then normalize values >= 1000 back into range (e.g., subtract 1000) before formatting. Example:
+
+```js
+let rounded = Math.round(rawBeats * 100) / 100;
+if (rounded >= 1000) rounded -= 1000;
+const out = rounded.toFixed(2);
+```
+
+
 Computation (pseudocode):
 
-```
-// JavaScript-style pseudocode
+- Integer beats (display `@nnn`):
+
+```js
+// JavaScript-style pseudocode — integer beats
 now = new Date()
 utcSeconds = now.getUTCHours() * 3600 + now.getUTCMinutes() * 60 + now.getUTCSeconds()
 // convert to Biel time (UTC+1) and wrap into 0..86399
-bielSeconds = (utcSeconds + 3600 + 24*3600) % (24*3600)
+bielSeconds = (utcSeconds + 3600) % 86400
 beat = Math.floor(bielSeconds / 86.4) % 1000
 display = `@${String(beat).padStart(3,'0')}`
+```
+
+- Centibeats (display `@nnn.nn`) — safe rounding + wrap:
+
+```js
+// JavaScript-style pseudocode — centibeats (safe)
+now = new Date()
+utcSeconds = now.getUTCHours() * 3600 + now.getUTCMinutes() * 60 + now.getUTCSeconds()
+// convert to Biel time (UTC+1) and wrap into 0..86399
+bielSeconds = (utcSeconds + 3600) % 86400
+rawBeats = bielSeconds / 86.4
+rounded = Math.round(rawBeats * 100) / 100
+if (rounded >= 1000) rounded -= 1000
+display = '@' + rounded.toFixed(2)
 ```
 
 Examples (UTC timestamps -> beats):
