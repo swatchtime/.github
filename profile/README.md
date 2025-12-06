@@ -2,15 +2,20 @@
 
 Welcome! 👋
 
-Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1) with the number of beats at 000. Twenty three hours and 59 minutes later, the day ends at 999 beats. Beats are written with an @ sign in front of them. So, @567 is 567 beats. Beats can also be subdivided into a 100 centibeats and the time can be displayed as @567.78 for greater precision. After @567.99, the time changes to @568.00. 
+This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. 
+<img src="../img/swatch-meridian.jpg" alt="Meridian in Biel, Switzerland" align="right" height="350">
 
-This is a photo of the meridian in Biel, Switzerland at the Swatch headquarters:
+Swatch Internet Time is a decimal time concept introduced by the Swatch corporation in 1998. It divides the day into 1,000 "beats" instead of hours, minutes, and seconds. Each beat is equivalent to 1 minute and 26.4 seconds. The day starts at midnight BMT (Biel Mean Time, UTC+1) with the number of beats at `000.00`. Twenty three hours and 59 minutes later, the day ends at `999.99` beats.  The photo shows the meridian for BMT which is located in Biel, Switzerland at the Swatch headquarters.
 
-<img src="../img/swatch-meridian.jpg" height="400">
+Beats are written with an @ sign in front of them. So, @567 is "567 beats". Beats can also be subdivided into a 100 centibeats and the time can be displayed as @567.78 for greater precision. After @567.99, the time changes to @568.00. 
 
-This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. This is not an official Swatch product. We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: websites, desktops, mobile devices, smart watches, and more!
+We think that Swatch Internet Time was a good idea that was ahead of it's time. Back in 1998, people were still using slow dial-up modems and web and mobile applications didn't exist. Smartphones didn't come along for another 9 years. There were no smart watches or tablets. Back then, people went home and connected to the Internet on their desktop computer. 
 
-#### Links:
+Now, people live on the Internet 24/7/365. The Internet is always on and you have access to it wherever you go on a variety of devices. Having a global time-keeping standard that doesn't change based on time zones or daylight savings time (and is the same in all locations) is still a great idea! We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: web sites, desktops, mobile devices, smart watches, smart TVs, and much more!
+
+<br>
+
+# Links:
 
 - Main app: https://swatchtime.online  
 - API endpoint: https://api.swatchtime.online/api/v1/current  
@@ -52,7 +57,11 @@ This site is a fan-made revival and is not affiliated with or endorsed by Swatch
 
 <br>
 
-## Definition of Beats
+# Technical Information
+
+<br>
+
+### The Definition of Beats
 
 Swatch Internet Time is expressed in "beats" (written as `@nnn`), where a day is divided into 1,000 equal parts.
 
@@ -60,7 +69,9 @@ Canonical definition used by this organization:
 
 - Reference zone: Biel Mean Time (BMT) defined as a fixed offset of UTC+1 (no daylight-saving adjustments).
 - One beat = 86.4 seconds (86.4 = 86400 / 1000).
-- Beats run from `@000` at Biel midnight (00:00:00 UTC+1) through `@999` just before the next Biel midnight.
+- Beats run from `@000.00` at Biel midnight (00:00:00 UTC+1) through `@999.99` just before the next Biel midnight.
+
+  <br>
 
 ### Note on centibeat rounding
 
