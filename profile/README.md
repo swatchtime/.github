@@ -13,16 +13,32 @@ We think Swatch Internet Time was a good idea that was ahead of it's time. Back 
 
 Now, people live on the Internet 24/7/365. The Internet is always on and you have access to it wherever you go on a variety of devices. Having a global time-keeping standard that doesn't change based on time zones or daylight savings time (and is the same in all locations) is still a great idea! We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: web sites, desktops, mobile devices, smart watches, smart TVs, and much more!
 
-<br>
-
-# Links:
-
-- Main app: https://swatchtime.online  
-- API endpoint: https://api.swatchtime.online/api/v1/current  
-- API Demo: https://demo.swatchtime.online
-- Basic Javascript app: https://kendawson.online/free/swatch/
 - About Swatch Internet Time: https://www.swatch.com/en-us/internet-time.html
 - Wikipedia page: https://en.wikipedia.org/wiki/Swatch_Internet_Time
+
+<br>
+
+# Apps and Services:
+
+### Live Clocks:
+
+  - **Main Clock**: https://swatchtime.online  
+
+  - **Basic Clock**: https://kendawson.online/free/swatch/
+
+### Desktop Apps:
+
+  - **Cinnamon Desklet** (Linux): https://github.com/swatchtime/cinnamon-desklet
+
+### Developers:
+
+  - **Code examples for beat calculation**: https://github.com/swatchtime/sample-code
+
+  - **API endpoint**: https://api.swatchtime.online/api/v1/current  
+
+  - **API demo**: https://demo.swatchtime.online
+
+  - **Embeddable web clocks**: https://clocks.swatchtime.online/
 
 <br>
 
@@ -33,10 +49,10 @@ Now, people live on the Internet 24/7/365. The Internet is always on and you hav
 <table align="center">
   <tr>
     <td>
-      <a href="../img/screenshot5.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time web site"><img src="../img/screenshot5.png" width="240" alt="Web site"></a>
+      <a href="../img/screenshot5.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time Main Clock"><img src="../img/screenshot5.png" width="240" alt="Main Clock"></a>
     </td>
     <td>
-      <a href="../img/screenshot2.jpg" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time Javascript app"><img src="../img/screenshot2.jpg" width="240" alt="Javascript app"></a>
+      <a href="../img/screenshot2.jpg" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time Basic Clock"><img src="../img/screenshot2.jpg" width="240" alt="Basic Clock"></a>
     </td>
     <td>
       <a href="../img/screenshot1.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time desklet for Linux"><img src="../img/screenshot1.png" width="240" alt="Desklet for Linux"></a>
@@ -47,10 +63,10 @@ Now, people live on the Internet 24/7/365. The Internet is always on and you hav
       <a href="../img/screenshot3.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time API"><img src="../img/screenshot3.png" width="240" alt="Swatch Internet Time API"></a>
     </td>
     <td>
-      <a href="../img/screenshot4.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time API Demo site"><img src="../img/screenshot4.png" width="240" alt="API Demo"></a>
+      <a href="../img/screenshot4.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time API demo site"><img src="../img/screenshot4.png" width="240" alt="API Demo"></a>
     </td>
     <td>
-      <!-- insert future image here -->
+      <a href="../img/screenshot6.png" target="_blank" rel="noopener noreferrer" title="Swatch Internet Time Embeddable Web Clocks"><img src="../img/screenshot6.png" width="240" alt="Embeddable web clocks"></a>
     </td>
   </tr>
 </table>
@@ -71,7 +87,7 @@ Canonical definition used by this organization:
 - One beat = 86.4 seconds (86.4 = 86400 / 1000).
 - Beats run from `@000.00` at Biel midnight (00:00:00 UTC+1) through `@999.99` just before the next Biel midnight.
 
-  <br>
+<br>
 
 ### Note on centibeat rounding
 
@@ -82,11 +98,11 @@ let rounded = Math.round(rawBeats * 100) / 100;
 if (rounded >= 1000) rounded -= 1000;
 const out = rounded.toFixed(2);
 ```
-
+<br>
 
 Computation (pseudocode):
 
-- Integer beats (display `@nnn`):
+Integer beats (display `@nnn`):
 
 ```js
 // JavaScript-style pseudocode — integer beats
@@ -97,8 +113,9 @@ bielSeconds = (utcSeconds + 3600) % 86400
 beat = Math.floor(bielSeconds / 86.4) % 1000
 display = `@${String(beat).padStart(3,'0')}`
 ```
+<br>
 
-- Centibeats (display `@nnn.nn`) — safe rounding + wrap:
+Centibeats (display `@nnn.nn`) — safe rounding + wrap:
 
 ```js
 // JavaScript-style pseudocode — centibeats (safe)
@@ -111,11 +128,14 @@ rounded = Math.round(rawBeats * 100) / 100
 if (rounded >= 1000) rounded -= 1000
 display = '@' + rounded.toFixed(2)
 ```
+<br>
 
 Examples (UTC timestamps -> beats):
 
 - `2025-01-01T00:00:00Z` -> Biel 01:00:00 -> `@041` (see note below)
 - `2025-01-01T23:00:00Z` -> Biel 00:00:00 (next day) -> `@000`
+
+<br>
 
 #### Mathematical definition:
 
@@ -128,21 +148,13 @@ Plain-text version:
 ```
 beats = floor(seconds_since_Biel_midnight (UTC+1) / 86.4) % 1000
 ```
+<br>
 
 #### Rationale / decision on DST:
 
 Historically there is ambiguity about whether to follow local Biel civil time (which observes DST) or to treat Biel as a fixed UTC+1 reference. To maximise interoperability, predictability, and simplicity for implementers, this project uses Biel as a fixed UTC+1 reference and does not apply daylight-saving adjustments. That means beats are stable across the year and do not jump when DST would otherwise change local civil time.
 
  Note: small off-by-one differences may occur in example arithmetic if seconds are truncated or rounded differently. If you integrate with this organization's API or libraries, compute beats using the formula above so implementations are consistent.
-
-<br>
-
-## Developer API
-
-There is a simple API which returns the current Swatch Internet Time:
-
-- Endpoint: https://api.swatchtime.online/api/v1/current
-- API Demo: https://demo.swatchtime.online
 
 <br>
 
@@ -161,10 +173,9 @@ The `sample-code` repo contains one-file examples (JavaScript, Python, Go, Rust,
 Some apps and tools we plan to build and add to this organization:
 
 - Android and iPhone apps
-- Desktop applications
+- Desktop applications on a variety of platforms
 - Desktop gadgets/widgets/desklets for multiple platforms
 - Smart watch (WearOS) app
-- Embeddable clocks for web sites
 - Smart TV apps
 - Generic libraries to help others build Swatch Internet Time clocks
 
@@ -184,8 +195,8 @@ If you are here to report a bug related to the Swatch Time Cinnamon Desklet (for
 - GitHub: https://github.com/kendawson-online
 - Email: <a href="mailto:admin@swatchtime.online" title="Send Email">admin@swatchtime.online</a>
 
-<br><br>
+<br><br><br>
 
 ## Disclaimer:
 
-This site is an independent revival of Swatch Internet Time and is not affiliated with Swatch Group. Swatch® is a registered trademark of The Swatch Group LTD. You can visit the official Swatch web site here: <a href="https://www.swatch.com/en-us/" target="_blank" rel="noopener noreferrer">https://www.swatch.com/</a>
+This fan site is an independent revival of Swatch Internet Time and is not affiliated with Swatch Group. Swatch® is a registered trademark of The Swatch Group LTD. You can visit the official Swatch web site here: <a href="https://www.swatch.com/en-us/" target="_blank" rel="noopener noreferrer">https://www.swatch.com/</a>
