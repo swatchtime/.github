@@ -9,7 +9,7 @@ Swatch Internet Time is a decimal time concept introduced by the Swatch corporat
 
 Beats are written with an @ sign in front of them. So, @567 is "567 beats". Beats can also be subdivided into a 100 centibeats and the time can be displayed as @567.78 for greater precision. After @567.99, the time changes to @568.00. 
 
-We think that Swatch Internet Time was a good idea that was ahead of it's time. Back in 1998, people were still using slow dial-up modems and web and mobile applications didn't exist. Smartphones didn't come along for another 9 years. There were no smart watches or tablets. Back then, people went home and connected to the Internet on their desktop computer. 
+We think Swatch Internet Time was a good idea that was ahead of it's time. Back in 1998, people were still using slow dial-up modems and web and mobile applications didn't exist. Smartphones didn't come along for another 9 years. There were no smart watches or tablets. Back then, people went home and connected to the Internet on their desktop computer. The Internet wasn't ready for Swatch Internet Time in 1998.
 
 Now, people live on the Internet 24/7/365. The Internet is always on and you have access to it wherever you go on a variety of devices. Having a global time-keeping standard that doesn't change based on time zones or daylight savings time (and is the same in all locations) is still a great idea! We are creating a collection of apps and tools which display Swatch Internet Time on a variety of devices and platforms including: web sites, desktops, mobile devices, smart watches, smart TVs, and much more!
 
