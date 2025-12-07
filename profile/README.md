@@ -1,6 +1,6 @@
 # Swatch Internet Time Revival
 
-Welcome! 👋
+### Welcome! 👋
 
 This site is a fan-made revival and is not affiliated with or endorsed by Swatch Group. 
 <img src="../img/swatch-meridian.jpg" alt="Meridian in Biel, Switzerland" align="right" height="350">
