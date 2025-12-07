@@ -38,7 +38,9 @@ Now, people live on the Internet 24/7/365. The Internet is always on and you hav
 
   - **API demo**: https://demo.swatchtime.online
 
-  - **Embeddable web clocks**: https://clocks.swatchtime.online/
+  - **Embeddable Javascript clocks**: https://clocks.swatchtime.online/
+
+  - **Embeddable clocks library**: https://www.npmjs.com/package/@swatchtime/clocks
 
 <br>
 
