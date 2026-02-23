@@ -30,6 +30,12 @@ Now, people live on the Internet 24/7/365. The Internet is always on and you hav
 
   - **Cinnamon Desklet** (Linux): https://github.com/swatchtime/cinnamon-desklet
 
+### Webmasters:
+
+  - **Embeddable Javascript clocks**: https://clocks.swatchtime.online/
+
+  - **Embeddable clocks library**: https://www.npmjs.com/package/@swatchtime/clocks
+
 ### Developers:
 
   - **Code examples for beat calculation**: https://github.com/swatchtime/sample-code
@@ -37,10 +43,6 @@ Now, people live on the Internet 24/7/365. The Internet is always on and you hav
   - **API endpoint**: https://api.swatchtime.online/api/v1/current  
 
   - **API demo**: https://demo.swatchtime.online
-
-  - **Embeddable Javascript clocks**: https://clocks.swatchtime.online/
-
-  - **Embeddable clocks library**: https://www.npmjs.com/package/@swatchtime/clocks
 
 <br>
 
