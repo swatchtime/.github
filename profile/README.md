@@ -183,6 +183,15 @@ Some apps and tools we plan to build and add to this organization:
 
 <br>
 
+# Other Implementations and Resources
+
+Here are some other projects which have added support for Swatch Internet Time. 
+
+- [inet-time for Java](https://github.com/wrprice/inet-time) by [@wrprice](https://github.com/wrprice/)
+- [Awesome Swatch Internet Time](https://github.com/wrprice/awesome-internettime) by [@wrprice](https://github.com/wrprice/)
+  * A curated list of awesome Swatch Internet Time libraries, software and resources.
+
+
 ## Contributing
 
 This is a work in progress. Contributions, issues, and ideas are welcome. Feel free to start a thread in our [Discussions forum](https://github.com/orgs/swatchtime/discussions) if you have any questions or comments. If you're a developer familiar with GitHub, open issues or create pull requests in the appropriate repository, and we'll triage them as needed.
