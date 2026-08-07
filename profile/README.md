@@ -43,6 +43,8 @@ Now, people live on the Internet 24/7/365. The Internet is always on and you hav
   - **API endpoint**: https://api.swatchtime.online/api/v1/current  
 
   - **API demo**: https://demo.swatchtime.online
+  
+  - **OpenClaw Skill**: https://github.com/swatchtime/openclaw-time-skill
 
 <br>
 
